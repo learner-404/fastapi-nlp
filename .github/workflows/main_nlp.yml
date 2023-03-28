@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'NLP'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5BF55E1B2616419594C098B37CD378DF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6583B376CEFF430B98313153AFCCB9C1 }}
