@@ -5,8 +5,8 @@ from nltk.metrics.distance  import edit_distance
 
 
 def writer(sentence):
-
-    df = pd.read_excel("~\\ResultsDS.xlsx")
+    url = 'https://github.com/learner-404/fastapi-nlp/blob/main/ResultsDS.xlsx'
+    df = pd.read_excel(url)
     # sentence = "Write a query to join teaspaceregisterkeyresultsqlds and teamspaceregisterthemsqldds."
     # sentence = input()
     tokenizer = TreebankWordTokenizer()
