@@ -6,7 +6,7 @@ from nltk.metrics.distance  import edit_distance
 
 def writer(sentence):
 
-    df = pd.read_excel("ResultsDS.xlsx")
+    df = pd.read_excel("/config/workspace/ResultsDS.xlsx")
     # sentence = "Write a query to join teaspaceregisterkeyresultsqlds and teamspaceregisterthemsqldds."
     # sentence = input()
     tokenizer = TreebankWordTokenizer()
