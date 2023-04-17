@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from promptgens import promptgen
-# import nltkmodules
+import nltkmodules
 import numpy as np
 import pandas as pd
 # import pickle
