@@ -5,9 +5,9 @@ from nltk.metrics.distance  import edit_distance
 
 
 def writer(sentence):
+    # url = "https://raw.githubusercontent.com/learner-404/fastapi-nlp/main/ResultsDS.xlsx"
+    # df = pd.read_excel(url,engine='openpyxl')
     df = pd.read_excel("ResultsDS.xlsx")
-#     url = "https://raw.githubusercontent.com/learner-404/fastapi-nlp/main/ResultsDS.xlsx"
-#     df = pd.read_excel(url,engine='openpyxl')
     # sentence = "Write a query to join teaspaceregisterkeyresultsqlds and teamspaceregisterthemsqldds."
     # sentence = input()
     tokenizer = TreebankWordTokenizer()
@@ -26,17 +26,18 @@ def writer(sentence):
             # print(temp)
             lst.append(temp)
 
-    print('### My SQL tables, with their properties:\n#')
-
+    # sent = str
+    sent = '### My SQL tables, with their properties:\n#'
     for wrd in lst:
         count = 0
         for name in df['Name']:
             if wrd[0] == name:
-                # print(token)
-                print(df['TableDef'][count])
+            # print(token)
+                sent = sent + '\n' + df['TableDef'][count]
             count+=1
         # print(tokn)
 
-    print('#\n### %s;\nSELECT' % sentence)
+    sent = sent + ('\n#\n### %s;\nSELECT' % sentence)
+    return sent
 
 # writer('Write a query to join teaspaceregisterkeyresultsqlds and teamspaceregisterthemsqldds.')
